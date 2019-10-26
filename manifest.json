@@ -1,0 +1,13 @@
+{
+"manifest_version": 2,
+	"name": "AI is fancy maths",
+	"version": "0.1",
+	"description": "Turns every mention of AI on any website into 'fancy maths'",
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": ["content.js"],
+			"run_at":"document_end"
+		}
+	]
+}
