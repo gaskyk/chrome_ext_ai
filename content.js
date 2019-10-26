@@ -16,9 +16,10 @@ function findAndReplace(){
   });
 }
 
+// \b accounts for a word boundary (regular expression)
 function replaceText (node) {
   let value = node.nodeValue;
-  value = value.replace(/ AI /gi, ' fancy maths ');
+  value = value.replace(/\bAI\b/gi, 'fancy maths');
   value = value.replace(/Artificial intelligence/gi, 'Fancy maths');
   value = value.replace(/artificial intelligence/gi, 'fancy maths');
   node.nodeValue = value;
